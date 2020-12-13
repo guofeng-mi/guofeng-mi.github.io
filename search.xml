@@ -28,7 +28,8 @@
   <entry>
     <title>react最佳实践</title>
     <url>/2020/12/13/react%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
-    <content><![CDATA[<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npx create-react-app</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>toc</p>
+<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npx create-react-app</span><br></pre></td></tr></table></figure>
 
 
 <hr>
