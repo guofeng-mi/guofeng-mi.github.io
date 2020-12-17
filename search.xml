@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/12/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>测试分类</category>
+      </categories>
+      <tags>
+        <tag>测试标签</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>react最佳实践</title>
+    <url>/2020/12/13/react%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
+    <content><![CDATA[<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npx create-react-app</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h1 id="增加配置文件-eslintrc"><a href="#增加配置文件-eslintrc" class="headerlink" title="增加配置文件 .eslintrc"></a>增加配置文件 .eslintrc</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 直接继承 react 的eslint配置</span><br><span class="line">&#123;</span><br><span class="line">    &quot;extends&quot;: &quot;react-app&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;extends&quot;: &quot;react-app&quot;,</span><br><span class="line">    &#x2F;&#x2F; 添加自己的规则</span><br><span class="line">    &quot;rules&quot;: &#123;</span><br><span class="line">        &quot;semi&quot;: &quot;error&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<br/>
+
+<h1 id="添加-eslintignore"><a href="#添加-eslintignore" class="headerlink" title="添加 .eslintignore"></a>添加 .eslintignore</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node_modules</span><br><span class="line">dist&#x2F;</span><br><span class="line">test</span><br><span class="line">build&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h1 id="规范编码规范-editorConfig"><a href="#规范编码规范-editorConfig" class="headerlink" title="规范编码规范 editorConfig"></a>规范编码规范 editorConfig</h1><p><a href="https://github.com/facebook/react/edit/master/.editorconfig">https://github.com/facebook/react/edit/master/.editorconfig</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># http:&#x2F;&#x2F;editorconfig.org</span><br><span class="line">root &#x3D; true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset &#x3D; utf-8</span><br><span class="line">end_of_line &#x3D; lf</span><br><span class="line">indent_size &#x3D; 2</span><br><span class="line">indent_style &#x3D; space</span><br><span class="line">insert_final_newline &#x3D; true</span><br><span class="line">max_line_length &#x3D; 80</span><br><span class="line">trim_trailing_whitespace &#x3D; true</span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">max_line_length &#x3D; 0</span><br><span class="line">trim_trailing_whitespace &#x3D; false</span><br><span class="line"></span><br><span class="line">[COMMIT_EDITMSG]</span><br><span class="line">max_line_length &#x3D; 0</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h1 id="配置-sass"><a href="#配置-sass" class="headerlink" title="配置 sass"></a>配置 sass</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm i --save node-sass-chokidar</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p>然后在自己项目的<code>package.json</code>中，将以下行添加到scripts中:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;build-css&quot;: &quot;node-sass-chokidar src&#x2F; -o src&#x2F;&quot;,</span><br><span class="line">&quot;watch-css&quot;: &quot;npm run build-css &amp;&amp; node-sass-chokidar src&#x2F; -o src&#x2F; --watch --recursive&quot;,</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<blockquote>
+<p>执行命令 <code>npm run build-css</code> 就能把 <code>.scss</code> 新建一个 <code>.css</code> 文件<br>执行 <code>npm run watch-css</code> 可以实时改变 <code>.css</code></p>
+</blockquote>
+<p><br/><br/></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install npm-run-all --save</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="在完成这些步骤之后，我们修改package-json的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更"><a href="#在完成这些步骤之后，我们修改package-json的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更" class="headerlink" title="在完成这些步骤之后，我们修改package.json的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更"></a>在完成这些步骤之后，我们修改<code>package.json</code>的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更</h1><p>最后的 script 应该是这样的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;build-css&quot;: &quot;node-sass-chokidar src&#x2F; -o src&#x2F;&quot;,</span><br><span class="line">&quot;watch-css&quot;: &quot;npm run build-css &amp;&amp; node-sass-chokidar src&#x2F; -o src&#x2F; --watch --recursive&quot;,</span><br><span class="line">&quot;start-js&quot;: &quot;react-scripts start&quot;,</span><br><span class="line">&quot;start&quot;: &quot;npm-run-all -p watch-css start-js&quot;,</span><br><span class="line">&quot;build-js&quot;: &quot;react-scripts build&quot;,</span><br><span class="line">&quot;build&quot;: &quot;npm-run-all build-css build-js&quot;,</span><br><span class="line">&quot;test&quot;: &quot;react-scripts test --env&#x3D;jsdom&quot;,</span><br><span class="line">&quot;eject&quot;: &quot;react-scripts eject&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h1 id="使用-react-router"><a href="#使用-react-router" class="headerlink" title="使用 react-router"></a>使用 react-router</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm i react-router-dom</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>react</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>http协议</title>
     <url>/2020/12/14/http%E5%8D%8F%E8%AE%AE/</url>
     <content><![CDATA[<h1 id="五层网络协议"><a href="#五层网络协议" class="headerlink" title="五层网络协议"></a>五层网络协议</h1><ol>
@@ -40,110 +124,18 @@
 <h1 id="HTTP-HyperText-Transfer-Protocol，超文本传输协议"><a href="#HTTP-HyperText-Transfer-Protocol，超文本传输协议" class="headerlink" title="HTTP(HyperText Transfer Protocol，超文本传输协议)"></a>HTTP(HyperText Transfer Protocol，超文本传输协议)</h1><ul>
 <li><p>Request(发送)</p>
 <ul>
-<li>请求头</li>
+<li>请求头<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">GET /URL/HTTP/<span class="number">1.1</span>(请求方式/URL/HTTP协议/协议版本)</span><br><span class="line">Host: 主机端口</span><br><span class="line">Connection: 链接方式</span><br><span class="line">Accept: 接收文本类型</span><br><span class="line">Accept-Encoding: 接受的编码方式</span><br><span class="line">Accept-Language: 接受的语言种类</span><br></pre></td></tr></table></figure></li>
+<li>数据体</li>
 </ul>
 </li>
 <li><p>Response(返回)</p>
+<ul>
+<li>返回头</li>
+<li>数据体</li>
+</ul>
 </li>
 </ul>
-]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTTP, HTTP性能优化</title>
-    <url>/2020/12/14/HTTP,%20HTTP%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<h1 id="你了解-HTTP-么？你知道如何减少-HTTP-请求确保你的性能最优"><a href="#你了解-HTTP-么？你知道如何减少-HTTP-请求确保你的性能最优" class="headerlink" title="你了解 HTTP 么？你知道如何减少 HTTP 请求确保你的性能最优"></a>你了解 HTTP 么？你知道如何减少 HTTP 请求确保你的性能最优</h1><ul>
-<li>HTTP 简介<br>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一<br>种网络协议。所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一<br>种发布和接收 HTML 页面的方法。1960 年美国人 Ted Nelson 构思了一种通过计算机处理<br>文本信息的方法，并称之为超文本（hypertext）,这成为了 HTTP 超文本传输协议标准架<br>构的发展根基。Ted Nelson 组织协调万维网协会（World Wide Web Consortium）和互联<br>网工程工作小组（Internet Engineering Task Force ）共同合作研究，最终发布了一系<br>列的 RFC，其中著名的 RFC 2616 定义了 HTTP 1.1。</li>
-</ul>
-<a id="more"></a>
-
-<ul>
-<li>1.0 版本<br>1996 年 5 月，HTTP/1.0 版本发布，内容大大增加。<br>首先，任何格式的内容都可以发送。这使得互联网不仅可以传输文字，还能传输图像、视<br>频、二进制文件。这为互联网的大发展奠定了基础。<br>其次，除了 GET 命令，还引入了 POST 命令和 HEAD 命令，丰富了浏览器与服务器的互动<br>手段。<br>再次，HTTP 请求和回应的格式也变了。除了数据部分，每次通信都必须包括头信息<br>（HTTP header），用来描述一些元数据。<br>其他的新增功能还包括状态码（status code）、多字符集支持、多部分发送（multi￾part type）、权限（authorization）、缓存（cache）、内容编码（content<br>encoding）等。<br>请求格式<br>下面是一个 1.0 版的 HTTP 请求的例子。<br>GET / HTTP/1.0<br>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)<br>Accept: <em>/</em><br>可以看到，这个格式与 0.9 版有很大变化。<br>渡一教育<br>第一行是请求命令，必须在尾部添加协议版本（HTTP/1.0）。后面就是多行头信息，描述<br>客户端的情况。<br>回应格式<br>服务器的回应如下。<br>HTTP/1.0 200 OK<br>Content-Type: text/plain<br>Content-Length: 137582<br>Expires: Thu, 05 Dec 1997 16:00:00 GMT<br>Last-Modified: Wed, 5 August 1996 15:55:28 GMT<br>Server: Apache 0.84<br>回应的格式是”头信息 + 一个空行（\r\n） + 数据”。其中，第一行是”协议版本 + 状态<br>码（status code） + 状态描述”。<br>Content-Type 字段<br>关于字符的编码，1.0 版规定，头信息必须是 ASCII 码，后面的数据可以是任何格式。<br>因此，服务器回应的时候，必须告诉客户端，数据是什么格式，这就是 Content-Type 字<br>段的作用。<br>下面是一些常见的 Content-Type 字段的值。<br>text/plain<br>text/html<br>text/css<br>image/jpeg<br>image/png<br>image/svg+xml<br>audio/mp4<br>video/mp4<br>application/javascript<br>application/pdf<br>application/zip<br>application/atom+xml<br>这些数据类型总称为 MIME type，每个值包括一级类型和二级类型，之间用斜杠分隔。<br>除了预定义的类型，厂商也可以自定义类型。<br>渡一教育<br>application/vnd.debian.binary-package<br>上面的类型表明，发送的是 Debian 系统的二进制数据包。<br>MIME type 还可以在尾部使用分号，添加参数。<br>Content-Type: text/html; charset=utf-8<br>上面的类型表明，发送的是网页，而且编码是 UTF-8。<br>客户端请求的时候，可以使用 Accept 字段声明自己可以接受哪些数据格式。<br>Accept: <em>/</em><br>上面代码中，客户端声明自己可以接受任何格式的数据。<br>MIME type 不仅用在 HTTP 协议，还可以用在其他地方，比如 HTML 网页。<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!-- 等同于 -->
-<meta charset="utf-8" /> 
-Content-Encoding 字段
-由于发送的数据可以是任何格式，因此可以把数据压缩后再发送。Content-Encoding 字
-段说明数据的压缩方法。
-Content-Encoding: gzip
-Content-Encoding: compress
-Content-Encoding: deflate
-客户端在请求时，用 Accept-Encoding 字段说明自己可以接受哪些压缩方法。
-Accept-Encoding: gzip, deflate
-缺点
-HTTP/1.0 版的主要缺点是，每个 TCP 连接只能发送一个请求。发送数据完毕，连接就关
-闭，如果还要请求其他资源，就必须再新建一个连接。
-TCP 连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢
-（slow start）。所以，HTTP 1.0 版本的性能比较差。随着网页加载的外部资源越来越
-多，这个问题就愈发突出了。
-渡一教育
-为了解决这个问题，有些浏览器在请求时，用了一个非标准的 Connection 字段。
-Connection: keep-alive
-这个字段要求服务器不要关闭 TCP 连接，以便其他请求复用。服务器同样回应这个字段。
-Connection: keep-alive
-一个可以复用的 TCP 连接就建立了，直到客户端或服务器主动关闭连接。但是，这不是标
-准字段，不同实现的行为可能不一致，因此不是根本的解决办法。</li>
-</ul>
-<p>1.1 版本<br>1997 年 1 月，HTTP/1.1 版本发布，只比 1.0 版本晚了半年。它进一步完善了 HTTP 协<br>议，一直用到了 20 年后的今天，直到现在还是最流行的版本。<br>持久连接<br>1.1 版的最大变化，就是引入了持久连接（persistent connection），即 TCP 连接默认<br>不关闭，可以被多个请求复用，不用声明 Connection: keep-alive。<br>客户端和服务器发现对方一段时间没有活动，就可以主动关闭连接。不过，规范的做法<br>是，客户端在最后一个请求时，发送 Connection: close，明确要求服务器关闭 TCP 连<br>接。<br>Connection: close<br>目前，对于同一个域名，大多数浏览器允许同时建立 6 个持久连接。<br>管道机制<br>1.1 版还引入了管道机制（pipelining），即在同一个 TCP 连接里面，客户端可以同时发<br>送多个请求。这样就进一步改进了 HTTP 协议的效率。<br>举例来说，客户端需要请求两个资源。以前的做法是，在同一个 TCP 连接里面，先发送 A<br>请求，然后等待服务器做出回应，收到后再发出 B 请求。管道机制则是允许浏览器同时发<br>出 A 请求和 B 请求，但是服务器还是按照顺序，先回应 A 请求，完成后再回应 B 请求。<br>Content-Length 字段<br>一个 TCP 连接现在可以传送多个回应，势必就要有一种机制，区分数据包是属于哪一个回<br>应的。这就是 Content-length 字段的作用，声明本次回应的数据长度。<br>渡一教育<br>Content-Length: 3495<br>上面代码告诉浏览器，本次回应的长度是 3495 个字节，后面的字节就属于下一个回应<br>了。<br>在 1.0 版中，Content-Length 字段不是必需的，因为浏览器发现服务器关闭了 TCP 连<br>接，就表明收到的数据包已经全了。<br>分块传输编码<br>使用 Content-Length 字段的前提条件是，服务器发送回应之前，必须知道回应的数据长<br>度。<br>对于一些很耗时的动态操作来说，这意味着，服务器要等到所有操作完成，才能发送数<br>据，显然这样的效率不高。更好的处理方法是，产生一块数据，就发送一块，采用”流模<br>式”（stream）取代”缓存模式”（buffer）。<br>因此，1.1 版规定可以不使用 Content-Length 字段，而使用”分块传输编码”（chunked<br>transfer encoding）。只要请求或回应的头信息有 Transfer-Encoding 字段，就表明回<br>应将由数量未定的数据块组成。<br>Transfer-Encoding: chunked<br>每个非空的数据块之前，会有一个 16 进制的数值，表示这个块的长度。最后是一个大小<br>为 0 的块，就表示本次回应的数据发送完了。下面是一个例子。<br>HTTP/1.1 200 OK<br>Content-Type: text/plain<br>Transfer-Encoding: chunked<br>25<br>This is the data in the first chunk<br>1C<br>and this is the second one<br>3<br>con<br>8<br>sequence<br>渡一教育<br>0<br>其他功能<br>1.1 版还新增了许多动词方法：PUT、PATCH、HEAD、 OPTIONS、DELETE。<br>另外，客户端请求的头信息新增了 Host 字段，用来指定服务器的域名。<br>Host: <a href="http://www.example.com/">www.example.com</a><br>有了 Host 字段，就可以将请求发往同一台服务器上的不同网站，为虚拟主机的兴起打下<br>了基础。<br>缺点<br>虽然 1.1 版允许复用 TCP 连接，但是同一个 TCP 连接里面，所有的数据通信是按次序进行<br>的。服务器只有处理完一个回应，才会进行下一个回应。要是前面的回应特别慢，后面就<br>会有许多请求排队等着。这称为”队头堵塞”（Head-of-line blocking）。<br>为了避免这个问题，只有两种方法：一是减少请求数，二是同时多开持久连接。这导致了<br>很多的网页优化技巧，比如合并脚本和样式表、将图片嵌入 CSS 代码、域名分片（domain<br>sharding）等等。如果 HTTP 协议设计得更好一些，这些额外的工作是可以避免的。<br>对于前端来说我们也要了解 hTTP 相关的内容。那么对于前端优化来说，HTTP 方面该如何<br>进行优化呢。今天想说一个方向——减少 HTTP 请求次数减少性能开销。该怎么做，能减<br>少哪些方向的性能开销，以及性能如何提升。<br>2．关于减少 http 请求数<br>关于减少 http 请求数,是前端开发性能优化的一个非常重要方面,所以在基本所有的优化<br>原则里,都有这一条原则:减少 http 请求数.<br>先不考虑其他的,我们先考虑为什么减少 http 请求可以优化性能.<br>减少 http 请求有这样几个优点:<br>(1) 减少 DNS 请求所耗费的时间.<br>且不说对错,因为从基本来说,减少 http 请求数的确可以减少 DNS 请求和解析耗费的时间.<br>(2) 减少服务器压力.<br>渡一教育<br>这个通常是被考虑最多的,也是我用来讲解给别人听的最大理由,因为每个 http 请求都会<br>耗费服务器资源,特别是一些需要计算合并等操作的服务器,耗费服务器的 cpu 资源可不是<br>开玩笑的事情,硬盘可以用钱买来,cpu 资源可就没那么廉价了.<br>(3) 减少 http 请求头.<br>当我们对服务器发起一个请求的时候,我们会携带着这个域名下的 cookie 和一些其他的信<br>息在 http 头部里,然后服务器响应请求的时候也会带回一些 cookie 之类的头部信息.这些<br>信息有的时候会很大,在这种请求和响应的时候会影响带宽性能. 3．解释原因<br>(1) 什么是 DNS 请求和解析呢?<br>简单来说,例如:<a href="http://www.taobao.com/">www.taobao.com</a> 这样一个 url,其中 www 部分被称为主机名<br>(hostname),taobao 这部分则是二级域,com 则是一级域,如果是这样一个网<br>址:<a href="http://www.ali.tao.com/">www.ali.tao.com</a> 那么 ali 就是三级域.<br>当我们去请求一个 url 的时候,首先会到本地服务器里去寻找缓存中是否有解析结果,如果<br>没有解析结果,就去根域名服务器请求,根域名服务器返回给本 地域名服务器一个所查询<br>的域的主域名服务器的 ip 地址,然后我们再去请求刚才返回的 ip 地址的域名服务器,然后<br>返回下一级域名的 ip 地址,直到我们找到域 名中所指的服务器 ip,然后将结果缓存起来<br>供下次使用,并返回此结果.<br>一个第一次请求的 url 的 DNS 解析过程可能耗费是很高的.但是解析一次之后,结果就会被<br>缓存起来,之后再请求的时候就不用走上面这一套复杂的解析过程了.<br>关于一个正常的 DNS 请求到底会耗费多少时间,这个没有定论,要看网速状况和地域,但是<br>考虑一个 dns 解析解析过后会被缓存起来,像淘宝这样的大网站,来的都是回头客,我们是<br>否可以忽略 DNS 解析花费的时间呢?<br>在前端优化里还有一个优化方法,那就是增加 hostname,例如,淘宝图片服务器,分为<br>img01，img02，img03 等主机名,我们在一个页面里的图片放在不同的 hostname 下,这样<br>就可以同时下载多个图片了,浏览器 http 连接数的限制可以被缓解一下。<br>为什么对于淘宝的图片来说,使用不同的 hostname 是个更优的方案呢?<br>首先,因为淘宝网的特殊性,淘宝网大多数访问者都是回头客,他们电脑里大多缓存着 dns<br>记录.这种情况,如果是小网站或者新兴网站可能要考虑,因为新用户比较多,可能 dns 请求<br>的消耗更大一些,而且第一印象对于这些网站来说更为重要.<br>渡一教育<br>再者,淘宝里的图片很多,一个页面里通常会用到几十张甚至上百张图片,在这种情况下,我<br>们更需要突破浏览器的 http 连接数的限制,以便加快加载速 度,这时候加载速度的考虑优<br>先级远远高于 DNS 的影响,而 yslow 中对于 DNS 的着重考虑可能更偏向中小网站,图片比较<br>少的网站.<br>对于 DNS 请求或者 tcp(tcp 握手之类的也会消耗请求时间)请求之类的分配和解析的消耗,<br>还有一个办法是 keeplive,让你的链接保持 keeplive,这样可以只建立一次链接,然后传输<br>多个文件,可以有效减少建立连接的时间.<br>(2) 减少服务器压力<br>过多的 http 请求对于服务器来说是很危险的,如果你的服务器不是很强,请把这一条考虑<br>放在第一位,其他的优化策略都只是优化,而这里涉及到的是服务器,你要保证你的服务器<br>能正常运转.<br>当然如果你是在淘宝的话,你就可以安心坐下来跟一群牛人谈论为什么要忽略 http 对服务<br>器的影响,因为我们要记住:我们是前端开发工程师,我们是在 做前端优化,后台和我们无<br>关,因为我们有足够强大的技术支持和硬件支持,当网站的技术发展到一定程度的时候,我<br>们的关注点应该向用户那里偏重,因为用户看 到的才是我们最终要展示的,用户感受到的<br>体验和速度才是我们要达到的速度,后台我们做的再快,前台呈现慢了,我们的服务器消耗<br>少了,省钱了,但是用户却因 此抛弃了我们,一切都是白费.所以,当后台足够支撑你不用你<br>去考虑后台压力的时候,那就安心考虑如何做好前台的工作吧.<br>Yslow 真的是一个误导人的工具,只要我们按照它的原则对网站进行优化,肯定最后可以拿<br>到高分来欺骗老板,但是对于有些场景,这些优化往往是一种 对性能的破坏,例如淘宝网的<br>商城首页,为了提高 Yslow 评分,所有的图片都采用了一个 hostname,分数提高了,但是并<br>行加载少了,不过商城首页都 是异步渲染和异步加载的,所以这种影响看起来并不明显.<br>商城首页有很多针对 yslow 的优化点,当然大多数优化是正确的,例如:导航那里,本来是全<br>部写在页面里的,不要小看那个导航,里面有 N 个链接节 点,以至于从浏览器里复制源代码<br>的时候浏览器会卡死,因为字节数太多了,这里 yslow 肯定不会饶过的,后来我们把导航做<br>成了异步加载的,评分理所当然上 去了.但是这是淘宝网,我们有足够的速度来提供足够的<br>用户体验.如果你的服务器提供不了这种速度,也承受不了这种频繁的异步请求的话,这种<br>优化就要慎重 了,延迟可能造成导航不可用.这也是针对场景来协调的.<br>淘宝现在在广泛部署 CDN,CDN 可以给我们提供足够的后台资源保障,在 CDN 和后台环境不<br>断万善的情况下,考虑重点应该更加专注于前台传输速度和展现解析速度的提升.<br>(3) 合并脚本和样式?<br>其实在前一篇文章里的那段讨论也是对于不同应用场景的不同考虑,<br>渡一教育<br>减少 http 请求数的一个方法,对于前端来说,那就是合并脚本和样式文件,称为 combo,通<br>过将多个文件合并成一个文件,然后一次性传输到客户 端,这样可以减少 http 请求,的确<br>是个有效的方法,甚至对于一些特殊的页面,例如首页,我们把样式和脚本都写在了页面里,<br>根本没有分离出来,他们不会产 生 http 请求,当然,也不会被缓存,这是被牺牲的代价.<br>为什么我们要这么做,因为首页的访问量很大?这样可以有效减少 http 请求数?恩,这只是<br>一部分原因,的确这样做有这样的好处,而且对于 assets 服务器不够强大的网站来说,在并<br>发量大的首页上实行这一套是很有效的.<br>但是,淘宝访问量最大的页面并不是首页,而是 detail 页面,也就是商品详情页!<br>这才是我们讨论的重点,为什么首页采用 combo 甚至写在页面里,而 detail 则按照正常的<br>样式和脚本来引用.首页是类似静态的页面,detail 则是应用型的.首页没有脚本,依然可<br>以起到导向的作用,但是 detail 页脚本没有运行起来的话,甚至无法购买商品.<br>其实在这里这样讨论并不能明显看出问题所在,因为淘宝在这些方面也不是很成熟,detail<br>页引用了大量脚本和样式,很多内容是多余的过期的.<br>这从本质上来说代表两种网页类型,一种是内容型,一种则是应用型.对于内容型的网站,脚<br>本并不是很重要(甚至样式),因为没有脚本,用户仍然可以浏 览页面,只是可能有些效果看<br>不到而已,所以我们可以把脚本合并起来,一起放在 body 底部,在页面内容都加载完后,再<br>一次性加载进来.而对于应用型的网 页,让应用跑起来才是最重要的,因为没有应用这个网<br>页就变得没有意义了,这时候,按需加载脚本是一种趋势,我们需要先把应用的基本框架和<br>功能按需加载进 来,让它们分别运行起来,而不是一起等脚本加载完再一起初始化,我们需<br>要应用能够快速响应用户,<br>而且还是说到 CDN,当 CDN 变得足够强的时候,连接数已经不是瓶颈,我们应该更多考虑怎<br>么让网页更快的展现给用户,对于无需脚本也可以提供服务的 内容型的网页,将脚本放在<br>页面底部,合并起来(减少连接数,我们仍然需要减少连接数,在不需要太快的使用脚本的情<br>况下),而对于应用型的网页,我们需要尽 快让功能运转,甚至让他们一部分一部分按优先<br>级初始化,这时候就要将脚本分开,按需加载.<br>(4) 减少 http 请求头<br>http 头是个庞大的家伙,你打开 taobao.com 的首页,alert 一下 document.cookie,会发现<br>淘宝网的 cookie 是如此 庞大,甚至比小型网页都大,每次你请求淘宝的服务器都会往返一<br>次这些数据,还有一些其他的头部信息,占用的空间也不小,可想而知这种消耗有多大.<br>然后其实自从用了 CDN,这一切都无需考虑太多,因为 CDN 和淘宝主站不在一个域名<br>下,cookie 不会互相污染,而 CDN 的域名下基本是没有 cookie 和头部信息的,所以每次请<br>求静态资源的时候,不会带着主站的 cookie 到处跑,而只是传输资源的主题内容,所以这对<br>渡一教育<br>于性能的影响在使用 cdn 之后会变得很小.但是如果你的静态资源服务器和主服务器在一<br>个域名下,那就要控制好 cookie 和其他头部信息的大小了,因为每次传送都会传送他 们.<br>4. 如何减少 HTTP 请求<br>在终端用户响应的时间中，有 80%~90%时间用于下载 HTML 文档引用的所有组件。这部分<br>时间包括下载页面中的图像、样式表、脚本、Flash 等。因此，改善响应时间的最简单、<br>也是最有效的途径就是减少组件的数量，并由此减少 HTTP 请求的数量。<br>减少页面组件数量的方法其实就是简化页面设计。那么有没有一种方法既能保持页面内容<br>的丰富又能减少页面组件的数量？可以很容易想到的方法就是合并多个组件。<br>CSS Sprites (雪碧图)<br>雪碧图可以将多张图片合并成为一张图片，然后使用 CSS 的 background-position 属性，<br>将其设置到背景图片期望的位置上。<br>例如有个 id 为#nav 的导航栏，导航栏包含四个链接，每个链接被包围在一个 LI 中，他<br>们使用同一背景图片。每个 LI 都有一个不同的类，通过 background-position 属性指定<br>了期望的偏移量。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"> <span class="selector-tag">ul</span><span class="selector-id">#nav</span> <span class="selector-tag">li</span> &#123; <span class="attribute">float</span>: left; <span class="attribute">width</span>: <span class="number">30px</span>; <span class="attribute">height</span>: <span class="number">30px</span>; </span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(./images/sprites.png); &#125;</span><br><span class="line"><span class="selector-class">.home</span> &#123; <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>;&#125; <span class="selector-class">.articles</span> &#123; <span class="attribute">background-position</span>: -<span class="number">31px</span> </span><br><span class="line"><span class="number">0</span>;&#125; <span class="selector-class">.tags</span> &#123; <span class="attribute">background-position</span>: -<span class="number">62px</span> <span class="number">0</span>;&#125; <span class="selector-class">.about</span> &#123; <span class="attribute">background-position</span>: -<span class="number">93px</span> </span><br><span class="line"><span class="number">0</span>;&#125; </span><br></pre></td></tr></table></figure>
-<p>雪碧图已经被广泛使用，一般用在网站上的小图标这类，数量多、体积小、不常更新的图<br>片上，例如:淘宝首页的 Sprites。它不仅降低了下载量，而且实际上，合并后的图片会<br>比分离的图片的总和要小，这是因为它降低了图片自身的开销（颜色表、格式信息，等<br>等）。<br>内联图片 (data:URL)<br>通过使用 data:URL 模式可以在 Web 页面中包含图片但无需额外的 HTTP 请求。<br>规范中对它的描述为：<br>允许将小块数据内联为‘立即（immediate）数’<br>数据就在 URL 自身之中，格式为<br>渡一教育</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">data:[][;base64], </span><br></pre></td></tr></table></figure>
-<p>其实就是所谓的 Base64 图片格式。由于 data:URL 是内联在页面中的，所以在跨越不同页<br>面时不会被缓存（document 一般不设置缓存）。<br>所以，更聪明的做法是使用 CSS 并将内联图片作为背景，并将该 CSS 作为外部样式表引<br>用，这样内联图片就能缓存在样式表中了。<br>合并脚本和样式表<br>一个页面会引入多个脚本或者样式表，如果可以将这些单独的文件合并到一个文件中，可<br>以减少 HTTP 请求的数量并缩短最终用户的响应时间。<br>在理想情况下，一个页面应该使用不多于一个的脚本和样式表。<br>然而在实际的开发环境中是很难完成的。在大型的、复杂的 Web 应用中，我们需要使用<br>JavaScript 的模块化的思想，将所有东西合并到一个单独的文件中看起来就是一种倒<br>退。因此，解决的方法是遵守编译型语言的模式，保持 JavaScript 的模块化，而在生成<br>过程中从一组特定的模块生成一个目标文件。<br>最后<br>总之,优化原则不是绝对的,对于不同的场景应该考虑不同的侧重点,别人的解决方案对于<br>你来说不一定是最优的,应该针对自己的网站规模和类型进行适度的优化,不能盲目追求标<br>准和最佳实践.</p>
-]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux常用命令</title>
-    <url>/2020/12/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTTP性能优化</title>
-    <url>/2020/12/14/HTTP%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>性能优化</title>
-    <url>/2020/12/14/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-1/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>性能优化</title>
-    <url>/2020/12/14/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>new操作符具体干了什么？</title>
-    <url>/2020/12/14/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%85%B7%E4%BD%93%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
-    <content><![CDATA[<ol>
-<li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。</li>
-<li>属性和方法被加入到 this 引用的对象中。</li>
-<li>新创建的对象由 this 所引用，并且最后隐式的返回 this。</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.__proto__ = Base.prototype;</span><br><span class="line">Base.call(obj);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常见状态码</title>
-    <url>/2020/12/14/%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81/</url>
-    <content><![CDATA[<h1 id="2-开头（请求成功）表示成功处理了请求的状态代码"><a href="#2-开头（请求成功）表示成功处理了请求的状态代码" class="headerlink" title="2 开头（请求成功）表示成功处理了请求的状态代码"></a>2 开头（请求成功）表示成功处理了请求的状态代码</h1><ul>
-<li>200 （成功）服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。</li>
-<li>201 （已创建） 请求成功并且服务器创建了新的资源。</li>
-<li>202 （已接受） 服务器已接受请求，但尚未处理。</li>
-<li>203 （非授权信息） 服务器已成功处理了请求，但返回的信息可能来自另一来源。</li>
-<li>204 （无内容） 服务器成功处理了请求，但没有返回任何内容。</li>
-<li>205 （重置内容）服务器成功处理了请求，但没有返回任何内容。</li>
-<li>206 （部分内容） 服务器成功处理了部分GET请求。</li>
-</ul>
+<p><img src="/images/Request.png" alt="Request"><br><img src="/images/Response.png" alt="Response"></p>
 ]]></content>
       <tags>
         <tag>网络</tag>
@@ -323,87 +315,279 @@ cond(no)->op</textarea><textarea id="flowchart-1-options" style="display: none">
       </tags>
   </entry>
   <entry>
-    <title>react最佳实践</title>
-    <url>/2020/12/13/react%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
-    <content><![CDATA[<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npx create-react-app</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h1 id="增加配置文件-eslintrc"><a href="#增加配置文件-eslintrc" class="headerlink" title="增加配置文件 .eslintrc"></a>增加配置文件 .eslintrc</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 直接继承 react 的eslint配置</span><br><span class="line">&#123;</span><br><span class="line">    &quot;extends&quot;: &quot;react-app&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;extends&quot;: &quot;react-app&quot;,</span><br><span class="line">    &#x2F;&#x2F; 添加自己的规则</span><br><span class="line">    &quot;rules&quot;: &#123;</span><br><span class="line">        &quot;semi&quot;: &quot;error&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<br/>
-
-<h1 id="添加-eslintignore"><a href="#添加-eslintignore" class="headerlink" title="添加 .eslintignore"></a>添加 .eslintignore</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node_modules</span><br><span class="line">dist&#x2F;</span><br><span class="line">test</span><br><span class="line">build&#x2F;</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h1 id="规范编码规范-editorConfig"><a href="#规范编码规范-editorConfig" class="headerlink" title="规范编码规范 editorConfig"></a>规范编码规范 editorConfig</h1><p><a href="https://github.com/facebook/react/edit/master/.editorconfig">https://github.com/facebook/react/edit/master/.editorconfig</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># http:&#x2F;&#x2F;editorconfig.org</span><br><span class="line">root &#x3D; true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset &#x3D; utf-8</span><br><span class="line">end_of_line &#x3D; lf</span><br><span class="line">indent_size &#x3D; 2</span><br><span class="line">indent_style &#x3D; space</span><br><span class="line">insert_final_newline &#x3D; true</span><br><span class="line">max_line_length &#x3D; 80</span><br><span class="line">trim_trailing_whitespace &#x3D; true</span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">max_line_length &#x3D; 0</span><br><span class="line">trim_trailing_whitespace &#x3D; false</span><br><span class="line"></span><br><span class="line">[COMMIT_EDITMSG]</span><br><span class="line">max_line_length &#x3D; 0</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h1 id="配置-sass"><a href="#配置-sass" class="headerlink" title="配置 sass"></a>配置 sass</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm i --save node-sass-chokidar</span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<p>然后在自己项目的<code>package.json</code>中，将以下行添加到scripts中:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;build-css&quot;: &quot;node-sass-chokidar src&#x2F; -o src&#x2F;&quot;,</span><br><span class="line">&quot;watch-css&quot;: &quot;npm run build-css &amp;&amp; node-sass-chokidar src&#x2F; -o src&#x2F; --watch --recursive&quot;,</span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<blockquote>
-<p>执行命令 <code>npm run build-css</code> 就能把 <code>.scss</code> 新建一个 <code>.css</code> 文件<br>执行 <code>npm run watch-css</code> 可以实时改变 <code>.css</code></p>
-</blockquote>
-<p><br/><br/></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install npm-run-all --save</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="在完成这些步骤之后，我们修改package-json的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更"><a href="#在完成这些步骤之后，我们修改package-json的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更" class="headerlink" title="在完成这些步骤之后，我们修改package.json的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更"></a>在完成这些步骤之后，我们修改<code>package.json</code>的script内容，让sass一边编译，一边跑着我们的前端项目，实现热更</h1><p>最后的 script 应该是这样的</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;build-css&quot;: &quot;node-sass-chokidar src&#x2F; -o src&#x2F;&quot;,</span><br><span class="line">&quot;watch-css&quot;: &quot;npm run build-css &amp;&amp; node-sass-chokidar src&#x2F; -o src&#x2F; --watch --recursive&quot;,</span><br><span class="line">&quot;start-js&quot;: &quot;react-scripts start&quot;,</span><br><span class="line">&quot;start&quot;: &quot;npm-run-all -p watch-css start-js&quot;,</span><br><span class="line">&quot;build-js&quot;: &quot;react-scripts build&quot;,</span><br><span class="line">&quot;build&quot;: &quot;npm-run-all build-css build-js&quot;,</span><br><span class="line">&quot;test&quot;: &quot;react-scripts test --env&#x3D;jsdom&quot;,</span><br><span class="line">&quot;eject&quot;: &quot;react-scripts eject&quot;</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h1 id="使用-react-router"><a href="#使用-react-router" class="headerlink" title="使用 react-router"></a>使用 react-router</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm i react-router-dom</span><br></pre></td></tr></table></figure>
-
-
-
-
-
+    <title>常见状态码</title>
+    <url>/2020/12/14/%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    <content><![CDATA[<h1 id="2-开头（请求成功）表示成功处理了请求的状态代码"><a href="#2-开头（请求成功）表示成功处理了请求的状态代码" class="headerlink" title="2 开头（请求成功）表示成功处理了请求的状态代码"></a>2 开头（请求成功）表示成功处理了请求的状态代码</h1><ul>
+<li>200 （成功）服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。</li>
+<li>201 （已创建） 请求成功并且服务器创建了新的资源。</li>
+<li>202 （已接受） 服务器已接受请求，但尚未处理。</li>
+<li>203 （非授权信息） 服务器已成功处理了请求，但返回的信息可能来自另一来源。</li>
+<li>204 （无内容） 服务器成功处理了请求，但没有返回任何内容。</li>
+<li>205 （重置内容）服务器成功处理了请求，但没有返回任何内容。</li>
+<li>206 （部分内容） 服务器成功处理了部分GET请求。</li>
+</ul>
 ]]></content>
       <tags>
-        <tag>react</tag>
+        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/12/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>new操作符具体干了什么？</title>
+    <url>/2020/12/14/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%85%B7%E4%BD%93%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
+    <content><![CDATA[<ol>
+<li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。</li>
+<li>属性和方法被加入到 this 引用的对象中。</li>
+<li>新创建的对象由 this 所引用，并且最后隐式的返回 this。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.__proto__ = Base.prototype;</span><br><span class="line">Base.call(obj);</span><br></pre></td></tr></table></figure>
 ]]></content>
-      <categories>
-        <category>测试分类</category>
-      </categories>
       <tags>
-        <tag>测试标签</tag>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTP性能优化</title>
+    <url>/2020/12/14/HTTP%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>性能优化</title>
+    <url>/2020/12/14/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>性能优化</title>
+    <url>/2020/12/14/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>HTTP, HTTP性能优化</title>
+    <url>/2020/12/14/HTTP,%20HTTP%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="你了解-HTTP-么？你知道如何减少-HTTP-请求确保你的性能最优"><a href="#你了解-HTTP-么？你知道如何减少-HTTP-请求确保你的性能最优" class="headerlink" title="你了解 HTTP 么？你知道如何减少 HTTP 请求确保你的性能最优"></a>你了解 HTTP 么？你知道如何减少 HTTP 请求确保你的性能最优</h1><ul>
+<li>HTTP 简介<br>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一<br>种网络协议。所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一<br>种发布和接收 HTML 页面的方法。1960 年美国人 Ted Nelson 构思了一种通过计算机处理<br>文本信息的方法，并称之为超文本（hypertext）,这成为了 HTTP 超文本传输协议标准架<br>构的发展根基。Ted Nelson 组织协调万维网协会（World Wide Web Consortium）和互联<br>网工程工作小组（Internet Engineering Task Force ）共同合作研究，最终发布了一系<br>列的 RFC，其中著名的 RFC 2616 定义了 HTTP 1.1。</li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li>1.0 版本<br>1996 年 5 月，HTTP/1.0 版本发布，内容大大增加。<br>首先，任何格式的内容都可以发送。这使得互联网不仅可以传输文字，还能传输图像、视<br>频、二进制文件。这为互联网的大发展奠定了基础。<br>其次，除了 GET 命令，还引入了 POST 命令和 HEAD 命令，丰富了浏览器与服务器的互动<br>手段。<br>再次，HTTP 请求和回应的格式也变了。除了数据部分，每次通信都必须包括头信息<br>（HTTP header），用来描述一些元数据。<br>其他的新增功能还包括状态码（status code）、多字符集支持、多部分发送（multi￾part type）、权限（authorization）、缓存（cache）、内容编码（content<br>encoding）等。<br>请求格式<br>下面是一个 1.0 版的 HTTP 请求的例子。<br>GET / HTTP/1.0<br>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)<br>Accept: <em>/</em><br>可以看到，这个格式与 0.9 版有很大变化。<br>渡一教育<br>第一行是请求命令，必须在尾部添加协议版本（HTTP/1.0）。后面就是多行头信息，描述<br>客户端的情况。<br>回应格式<br>服务器的回应如下。<br>HTTP/1.0 200 OK<br>Content-Type: text/plain<br>Content-Length: 137582<br>Expires: Thu, 05 Dec 1997 16:00:00 GMT<br>Last-Modified: Wed, 5 August 1996 15:55:28 GMT<br>Server: Apache 0.84<br>回应的格式是”头信息 + 一个空行（\r\n） + 数据”。其中，第一行是”协议版本 + 状态<br>码（status code） + 状态描述”。<br>Content-Type 字段<br>关于字符的编码，1.0 版规定，头信息必须是 ASCII 码，后面的数据可以是任何格式。<br>因此，服务器回应的时候，必须告诉客户端，数据是什么格式，这就是 Content-Type 字<br>段的作用。<br>下面是一些常见的 Content-Type 字段的值。<br>text/plain<br>text/html<br>text/css<br>image/jpeg<br>image/png<br>image/svg+xml<br>audio/mp4<br>video/mp4<br>application/javascript<br>application/pdf<br>application/zip<br>application/atom+xml<br>这些数据类型总称为 MIME type，每个值包括一级类型和二级类型，之间用斜杠分隔。<br>除了预定义的类型，厂商也可以自定义类型。<br>渡一教育<br>application/vnd.debian.binary-package<br>上面的类型表明，发送的是 Debian 系统的二进制数据包。<br>MIME type 还可以在尾部使用分号，添加参数。<br>Content-Type: text/html; charset=utf-8<br>上面的类型表明，发送的是网页，而且编码是 UTF-8。<br>客户端请求的时候，可以使用 Accept 字段声明自己可以接受哪些数据格式。<br>Accept: <em>/</em><br>上面代码中，客户端声明自己可以接受任何格式的数据。<br>MIME type 不仅用在 HTTP 协议，还可以用在其他地方，比如 HTML 网页。<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 等同于 -->
+<meta charset="utf-8" /> 
+Content-Encoding 字段
+由于发送的数据可以是任何格式，因此可以把数据压缩后再发送。Content-Encoding 字
+段说明数据的压缩方法。
+Content-Encoding: gzip
+Content-Encoding: compress
+Content-Encoding: deflate
+客户端在请求时，用 Accept-Encoding 字段说明自己可以接受哪些压缩方法。
+Accept-Encoding: gzip, deflate
+缺点
+HTTP/1.0 版的主要缺点是，每个 TCP 连接只能发送一个请求。发送数据完毕，连接就关
+闭，如果还要请求其他资源，就必须再新建一个连接。
+TCP 连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢
+（slow start）。所以，HTTP 1.0 版本的性能比较差。随着网页加载的外部资源越来越
+多，这个问题就愈发突出了。
+渡一教育
+为了解决这个问题，有些浏览器在请求时，用了一个非标准的 Connection 字段。
+Connection: keep-alive
+这个字段要求服务器不要关闭 TCP 连接，以便其他请求复用。服务器同样回应这个字段。
+Connection: keep-alive
+一个可以复用的 TCP 连接就建立了，直到客户端或服务器主动关闭连接。但是，这不是标
+准字段，不同实现的行为可能不一致，因此不是根本的解决办法。</li>
+</ul>
+<p>1.1 版本<br>1997 年 1 月，HTTP/1.1 版本发布，只比 1.0 版本晚了半年。它进一步完善了 HTTP 协<br>议，一直用到了 20 年后的今天，直到现在还是最流行的版本。<br>持久连接<br>1.1 版的最大变化，就是引入了持久连接（persistent connection），即 TCP 连接默认<br>不关闭，可以被多个请求复用，不用声明 Connection: keep-alive。<br>客户端和服务器发现对方一段时间没有活动，就可以主动关闭连接。不过，规范的做法<br>是，客户端在最后一个请求时，发送 Connection: close，明确要求服务器关闭 TCP 连<br>接。<br>Connection: close<br>目前，对于同一个域名，大多数浏览器允许同时建立 6 个持久连接。<br>管道机制<br>1.1 版还引入了管道机制（pipelining），即在同一个 TCP 连接里面，客户端可以同时发<br>送多个请求。这样就进一步改进了 HTTP 协议的效率。<br>举例来说，客户端需要请求两个资源。以前的做法是，在同一个 TCP 连接里面，先发送 A<br>请求，然后等待服务器做出回应，收到后再发出 B 请求。管道机制则是允许浏览器同时发<br>出 A 请求和 B 请求，但是服务器还是按照顺序，先回应 A 请求，完成后再回应 B 请求。<br>Content-Length 字段<br>一个 TCP 连接现在可以传送多个回应，势必就要有一种机制，区分数据包是属于哪一个回<br>应的。这就是 Content-length 字段的作用，声明本次回应的数据长度。<br>渡一教育<br>Content-Length: 3495<br>上面代码告诉浏览器，本次回应的长度是 3495 个字节，后面的字节就属于下一个回应<br>了。<br>在 1.0 版中，Content-Length 字段不是必需的，因为浏览器发现服务器关闭了 TCP 连<br>接，就表明收到的数据包已经全了。<br>分块传输编码<br>使用 Content-Length 字段的前提条件是，服务器发送回应之前，必须知道回应的数据长<br>度。<br>对于一些很耗时的动态操作来说，这意味着，服务器要等到所有操作完成，才能发送数<br>据，显然这样的效率不高。更好的处理方法是，产生一块数据，就发送一块，采用”流模<br>式”（stream）取代”缓存模式”（buffer）。<br>因此，1.1 版规定可以不使用 Content-Length 字段，而使用”分块传输编码”（chunked<br>transfer encoding）。只要请求或回应的头信息有 Transfer-Encoding 字段，就表明回<br>应将由数量未定的数据块组成。<br>Transfer-Encoding: chunked<br>每个非空的数据块之前，会有一个 16 进制的数值，表示这个块的长度。最后是一个大小<br>为 0 的块，就表示本次回应的数据发送完了。下面是一个例子。<br>HTTP/1.1 200 OK<br>Content-Type: text/plain<br>Transfer-Encoding: chunked<br>25<br>This is the data in the first chunk<br>1C<br>and this is the second one<br>3<br>con<br>8<br>sequence<br>渡一教育<br>0<br>其他功能<br>1.1 版还新增了许多动词方法：PUT、PATCH、HEAD、 OPTIONS、DELETE。<br>另外，客户端请求的头信息新增了 Host 字段，用来指定服务器的域名。<br>Host: <a href="http://www.example.com/">www.example.com</a><br>有了 Host 字段，就可以将请求发往同一台服务器上的不同网站，为虚拟主机的兴起打下<br>了基础。<br>缺点<br>虽然 1.1 版允许复用 TCP 连接，但是同一个 TCP 连接里面，所有的数据通信是按次序进行<br>的。服务器只有处理完一个回应，才会进行下一个回应。要是前面的回应特别慢，后面就<br>会有许多请求排队等着。这称为”队头堵塞”（Head-of-line blocking）。<br>为了避免这个问题，只有两种方法：一是减少请求数，二是同时多开持久连接。这导致了<br>很多的网页优化技巧，比如合并脚本和样式表、将图片嵌入 CSS 代码、域名分片（domain<br>sharding）等等。如果 HTTP 协议设计得更好一些，这些额外的工作是可以避免的。<br>对于前端来说我们也要了解 hTTP 相关的内容。那么对于前端优化来说，HTTP 方面该如何<br>进行优化呢。今天想说一个方向——减少 HTTP 请求次数减少性能开销。该怎么做，能减<br>少哪些方向的性能开销，以及性能如何提升。<br>2．关于减少 http 请求数<br>关于减少 http 请求数,是前端开发性能优化的一个非常重要方面,所以在基本所有的优化<br>原则里,都有这一条原则:减少 http 请求数.<br>先不考虑其他的,我们先考虑为什么减少 http 请求可以优化性能.<br>减少 http 请求有这样几个优点:<br>(1) 减少 DNS 请求所耗费的时间.<br>且不说对错,因为从基本来说,减少 http 请求数的确可以减少 DNS 请求和解析耗费的时间.<br>(2) 减少服务器压力.<br>渡一教育<br>这个通常是被考虑最多的,也是我用来讲解给别人听的最大理由,因为每个 http 请求都会<br>耗费服务器资源,特别是一些需要计算合并等操作的服务器,耗费服务器的 cpu 资源可不是<br>开玩笑的事情,硬盘可以用钱买来,cpu 资源可就没那么廉价了.<br>(3) 减少 http 请求头.<br>当我们对服务器发起一个请求的时候,我们会携带着这个域名下的 cookie 和一些其他的信<br>息在 http 头部里,然后服务器响应请求的时候也会带回一些 cookie 之类的头部信息.这些<br>信息有的时候会很大,在这种请求和响应的时候会影响带宽性能. 3．解释原因<br>(1) 什么是 DNS 请求和解析呢?<br>简单来说,例如:<a href="http://www.taobao.com/">www.taobao.com</a> 这样一个 url,其中 www 部分被称为主机名<br>(hostname),taobao 这部分则是二级域,com 则是一级域,如果是这样一个网<br>址:<a href="http://www.ali.tao.com/">www.ali.tao.com</a> 那么 ali 就是三级域.<br>当我们去请求一个 url 的时候,首先会到本地服务器里去寻找缓存中是否有解析结果,如果<br>没有解析结果,就去根域名服务器请求,根域名服务器返回给本 地域名服务器一个所查询<br>的域的主域名服务器的 ip 地址,然后我们再去请求刚才返回的 ip 地址的域名服务器,然后<br>返回下一级域名的 ip 地址,直到我们找到域 名中所指的服务器 ip,然后将结果缓存起来<br>供下次使用,并返回此结果.<br>一个第一次请求的 url 的 DNS 解析过程可能耗费是很高的.但是解析一次之后,结果就会被<br>缓存起来,之后再请求的时候就不用走上面这一套复杂的解析过程了.<br>关于一个正常的 DNS 请求到底会耗费多少时间,这个没有定论,要看网速状况和地域,但是<br>考虑一个 dns 解析解析过后会被缓存起来,像淘宝这样的大网站,来的都是回头客,我们是<br>否可以忽略 DNS 解析花费的时间呢?<br>在前端优化里还有一个优化方法,那就是增加 hostname,例如,淘宝图片服务器,分为<br>img01，img02，img03 等主机名,我们在一个页面里的图片放在不同的 hostname 下,这样<br>就可以同时下载多个图片了,浏览器 http 连接数的限制可以被缓解一下。<br>为什么对于淘宝的图片来说,使用不同的 hostname 是个更优的方案呢?<br>首先,因为淘宝网的特殊性,淘宝网大多数访问者都是回头客,他们电脑里大多缓存着 dns<br>记录.这种情况,如果是小网站或者新兴网站可能要考虑,因为新用户比较多,可能 dns 请求<br>的消耗更大一些,而且第一印象对于这些网站来说更为重要.<br>渡一教育<br>再者,淘宝里的图片很多,一个页面里通常会用到几十张甚至上百张图片,在这种情况下,我<br>们更需要突破浏览器的 http 连接数的限制,以便加快加载速 度,这时候加载速度的考虑优<br>先级远远高于 DNS 的影响,而 yslow 中对于 DNS 的着重考虑可能更偏向中小网站,图片比较<br>少的网站.<br>对于 DNS 请求或者 tcp(tcp 握手之类的也会消耗请求时间)请求之类的分配和解析的消耗,<br>还有一个办法是 keeplive,让你的链接保持 keeplive,这样可以只建立一次链接,然后传输<br>多个文件,可以有效减少建立连接的时间.<br>(2) 减少服务器压力<br>过多的 http 请求对于服务器来说是很危险的,如果你的服务器不是很强,请把这一条考虑<br>放在第一位,其他的优化策略都只是优化,而这里涉及到的是服务器,你要保证你的服务器<br>能正常运转.<br>当然如果你是在淘宝的话,你就可以安心坐下来跟一群牛人谈论为什么要忽略 http 对服务<br>器的影响,因为我们要记住:我们是前端开发工程师,我们是在 做前端优化,后台和我们无<br>关,因为我们有足够强大的技术支持和硬件支持,当网站的技术发展到一定程度的时候,我<br>们的关注点应该向用户那里偏重,因为用户看 到的才是我们最终要展示的,用户感受到的<br>体验和速度才是我们要达到的速度,后台我们做的再快,前台呈现慢了,我们的服务器消耗<br>少了,省钱了,但是用户却因 此抛弃了我们,一切都是白费.所以,当后台足够支撑你不用你<br>去考虑后台压力的时候,那就安心考虑如何做好前台的工作吧.<br>Yslow 真的是一个误导人的工具,只要我们按照它的原则对网站进行优化,肯定最后可以拿<br>到高分来欺骗老板,但是对于有些场景,这些优化往往是一种 对性能的破坏,例如淘宝网的<br>商城首页,为了提高 Yslow 评分,所有的图片都采用了一个 hostname,分数提高了,但是并<br>行加载少了,不过商城首页都 是异步渲染和异步加载的,所以这种影响看起来并不明显.<br>商城首页有很多针对 yslow 的优化点,当然大多数优化是正确的,例如:导航那里,本来是全<br>部写在页面里的,不要小看那个导航,里面有 N 个链接节 点,以至于从浏览器里复制源代码<br>的时候浏览器会卡死,因为字节数太多了,这里 yslow 肯定不会饶过的,后来我们把导航做<br>成了异步加载的,评分理所当然上 去了.但是这是淘宝网,我们有足够的速度来提供足够的<br>用户体验.如果你的服务器提供不了这种速度,也承受不了这种频繁的异步请求的话,这种<br>优化就要慎重 了,延迟可能造成导航不可用.这也是针对场景来协调的.<br>淘宝现在在广泛部署 CDN,CDN 可以给我们提供足够的后台资源保障,在 CDN 和后台环境不<br>断万善的情况下,考虑重点应该更加专注于前台传输速度和展现解析速度的提升.<br>(3) 合并脚本和样式?<br>其实在前一篇文章里的那段讨论也是对于不同应用场景的不同考虑,<br>渡一教育<br>减少 http 请求数的一个方法,对于前端来说,那就是合并脚本和样式文件,称为 combo,通<br>过将多个文件合并成一个文件,然后一次性传输到客户 端,这样可以减少 http 请求,的确<br>是个有效的方法,甚至对于一些特殊的页面,例如首页,我们把样式和脚本都写在了页面里,<br>根本没有分离出来,他们不会产 生 http 请求,当然,也不会被缓存,这是被牺牲的代价.<br>为什么我们要这么做,因为首页的访问量很大?这样可以有效减少 http 请求数?恩,这只是<br>一部分原因,的确这样做有这样的好处,而且对于 assets 服务器不够强大的网站来说,在并<br>发量大的首页上实行这一套是很有效的.<br>但是,淘宝访问量最大的页面并不是首页,而是 detail 页面,也就是商品详情页!<br>这才是我们讨论的重点,为什么首页采用 combo 甚至写在页面里,而 detail 则按照正常的<br>样式和脚本来引用.首页是类似静态的页面,detail 则是应用型的.首页没有脚本,依然可<br>以起到导向的作用,但是 detail 页脚本没有运行起来的话,甚至无法购买商品.<br>其实在这里这样讨论并不能明显看出问题所在,因为淘宝在这些方面也不是很成熟,detail<br>页引用了大量脚本和样式,很多内容是多余的过期的.<br>这从本质上来说代表两种网页类型,一种是内容型,一种则是应用型.对于内容型的网站,脚<br>本并不是很重要(甚至样式),因为没有脚本,用户仍然可以浏 览页面,只是可能有些效果看<br>不到而已,所以我们可以把脚本合并起来,一起放在 body 底部,在页面内容都加载完后,再<br>一次性加载进来.而对于应用型的网 页,让应用跑起来才是最重要的,因为没有应用这个网<br>页就变得没有意义了,这时候,按需加载脚本是一种趋势,我们需要先把应用的基本框架和<br>功能按需加载进 来,让它们分别运行起来,而不是一起等脚本加载完再一起初始化,我们需<br>要应用能够快速响应用户,<br>而且还是说到 CDN,当 CDN 变得足够强的时候,连接数已经不是瓶颈,我们应该更多考虑怎<br>么让网页更快的展现给用户,对于无需脚本也可以提供服务的 内容型的网页,将脚本放在<br>页面底部,合并起来(减少连接数,我们仍然需要减少连接数,在不需要太快的使用脚本的情<br>况下),而对于应用型的网页,我们需要尽 快让功能运转,甚至让他们一部分一部分按优先<br>级初始化,这时候就要将脚本分开,按需加载.<br>(4) 减少 http 请求头<br>http 头是个庞大的家伙,你打开 taobao.com 的首页,alert 一下 document.cookie,会发现<br>淘宝网的 cookie 是如此 庞大,甚至比小型网页都大,每次你请求淘宝的服务器都会往返一<br>次这些数据,还有一些其他的头部信息,占用的空间也不小,可想而知这种消耗有多大.<br>然后其实自从用了 CDN,这一切都无需考虑太多,因为 CDN 和淘宝主站不在一个域名<br>下,cookie 不会互相污染,而 CDN 的域名下基本是没有 cookie 和头部信息的,所以每次请<br>求静态资源的时候,不会带着主站的 cookie 到处跑,而只是传输资源的主题内容,所以这对<br>渡一教育<br>于性能的影响在使用 cdn 之后会变得很小.但是如果你的静态资源服务器和主服务器在一<br>个域名下,那就要控制好 cookie 和其他头部信息的大小了,因为每次传送都会传送他 们.<br>4. 如何减少 HTTP 请求<br>在终端用户响应的时间中，有 80%~90%时间用于下载 HTML 文档引用的所有组件。这部分<br>时间包括下载页面中的图像、样式表、脚本、Flash 等。因此，改善响应时间的最简单、<br>也是最有效的途径就是减少组件的数量，并由此减少 HTTP 请求的数量。<br>减少页面组件数量的方法其实就是简化页面设计。那么有没有一种方法既能保持页面内容<br>的丰富又能减少页面组件的数量？可以很容易想到的方法就是合并多个组件。<br>CSS Sprites (雪碧图)<br>雪碧图可以将多张图片合并成为一张图片，然后使用 CSS 的 background-position 属性，<br>将其设置到背景图片期望的位置上。<br>例如有个 id 为#nav 的导航栏，导航栏包含四个链接，每个链接被包围在一个 LI 中，他<br>们使用同一背景图片。每个 LI 都有一个不同的类，通过 background-position 属性指定<br>了期望的偏移量。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"> <span class="selector-tag">ul</span><span class="selector-id">#nav</span> <span class="selector-tag">li</span> &#123; <span class="attribute">float</span>: left; <span class="attribute">width</span>: <span class="number">30px</span>; <span class="attribute">height</span>: <span class="number">30px</span>; </span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(./images/sprites.png); &#125;</span><br><span class="line"><span class="selector-class">.home</span> &#123; <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>;&#125; <span class="selector-class">.articles</span> &#123; <span class="attribute">background-position</span>: -<span class="number">31px</span> </span><br><span class="line"><span class="number">0</span>;&#125; <span class="selector-class">.tags</span> &#123; <span class="attribute">background-position</span>: -<span class="number">62px</span> <span class="number">0</span>;&#125; <span class="selector-class">.about</span> &#123; <span class="attribute">background-position</span>: -<span class="number">93px</span> </span><br><span class="line"><span class="number">0</span>;&#125; </span><br></pre></td></tr></table></figure>
+<p>雪碧图已经被广泛使用，一般用在网站上的小图标这类，数量多、体积小、不常更新的图<br>片上，例如:淘宝首页的 Sprites。它不仅降低了下载量，而且实际上，合并后的图片会<br>比分离的图片的总和要小，这是因为它降低了图片自身的开销（颜色表、格式信息，等<br>等）。<br>内联图片 (data:URL)<br>通过使用 data:URL 模式可以在 Web 页面中包含图片但无需额外的 HTTP 请求。<br>规范中对它的描述为：<br>允许将小块数据内联为‘立即（immediate）数’<br>数据就在 URL 自身之中，格式为<br>渡一教育</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">data:[][;base64], </span><br></pre></td></tr></table></figure>
+<p>其实就是所谓的 Base64 图片格式。由于 data:URL 是内联在页面中的，所以在跨越不同页<br>面时不会被缓存（document 一般不设置缓存）。<br>所以，更聪明的做法是使用 CSS 并将内联图片作为背景，并将该 CSS 作为外部样式表引<br>用，这样内联图片就能缓存在样式表中了。<br>合并脚本和样式表<br>一个页面会引入多个脚本或者样式表，如果可以将这些单独的文件合并到一个文件中，可<br>以减少 HTTP 请求的数量并缩短最终用户的响应时间。<br>在理想情况下，一个页面应该使用不多于一个的脚本和样式表。<br>然而在实际的开发环境中是很难完成的。在大型的、复杂的 Web 应用中，我们需要使用<br>JavaScript 的模块化的思想，将所有东西合并到一个单独的文件中看起来就是一种倒<br>退。因此，解决的方法是遵守编译型语言的模式，保持 JavaScript 的模块化，而在生成<br>过程中从一组特定的模块生成一个目标文件。<br>最后<br>总之,优化原则不是绝对的,对于不同的场景应该考虑不同的侧重点,别人的解决方案对于<br>你来说不一定是最优的,应该针对自己的网站规模和类型进行适度的优化,不能盲目追求标<br>准和最佳实践.</p>
+]]></content>
+      <tags>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux常用命令</title>
+    <url>/2020/12/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="常用的文件、目录操作命令"><a href="#常用的文件、目录操作命令" class="headerlink" title="常用的文件、目录操作命令"></a>常用的文件、目录操作命令</h1><ul>
+<li><code>pwd</code> : 查看用户的当前目录</li>
+<li><code>cd</code> : 命令来切换目录</li>
+<li><code>.</code> : 当前目录</li>
+<li><code>..</code> : 当前目录的上一级目录（父目录）</li>
+<li><code>-</code> : 用 cd 命令切换目录前所在的目录</li>
+<li><code>~</code> : 用户主目录的绝对路径名</li>
+<li><code>ls</code> : 显示文件或目录信息</li>
+<li><code>mkdir</code> : 当前目录下创建一个空目录</li>
+<li><code>rmdir</code> : 要求目录为空</li>
+<li><code>touch</code> : 生成一个空文件或更改文件的时间</li>
+<li><code>cp</code> : 复制文件或目录</li>
+<li><code>mv</code> : 移动文件或目录、文件或目录改名</li>
+<li><code>rm</code> : 删除文件或目录</li>
+<li><code>ln</code> : 建立链接文件</li>
+<li><code>find</code> : 查找文件</li>
+<li><code>file</code> /stat: 查看文件类型或文件属性信息</li>
+<li><code>cat</code> : 查看文本文件内容</li>
+<li><code>more</code> : 可以分页看</li>
+<li><code>less</code> : 不仅可以分页，还可以方便地搜索，回翻等操作</li>
+<li><code>tail</code>  -10:  查看文件的尾部的10行</li>
+<li><code>head</code>  -20: 查看文件的头部20行</li>
+<li><code>echo</code> : 把内容重定向到指定的文件中 ，有则打开，无则创建</li>
+</ul>
+<h1 id="文件打包和压缩命令"><a href="#文件打包和压缩命令" class="headerlink" title="文件打包和压缩命令"></a>文件打包和压缩命令</h1><p><strong>压缩命令</strong></p>
+<ul>
+<li><code>gzip filename</code></li>
+<li><code>bzip2 filename</code></li>
+<li><code>tar -czvf filename</code></li>
+</ul>
+<p><strong>解压命令</strong></p>
+<ul>
+<li><code>gzip -d filename.gz</code></li>
+<li><code>bzip2 -d filename.bz2</code></li>
+<li><code>tar -xzvf filename.tar.gz</code></li>
+</ul>
+<h1 id="vim程序编辑器"><a href="#vim程序编辑器" class="headerlink" title="vim程序编辑器"></a>vim程序编辑器</h1><p>vim是vi文本编辑器的进阶版，在所有linux系统上均可使用</p>
+<p>vi分为三种模式：一般模式，编辑模式和指令列命令模式 </p>
+<p><code>vi hello.c</code> : 进入 hello.c 文件，此时为一般模式，若 hello.c 不存在则自动新建 </p>
+<p>一般模式下执行vi定义的键盘上转义字符操作，</p>
+<ul>
+<li><code>del</code> : 删除光标上字符（mac键盘为 <code>option</code> + 删除键）</li>
+<li><code>dd</code> : 删除一整列，退格键及上下左右键移动光标</li>
+<li><code>i</code> : 进入插入光标前编辑模式</li>
+<li><code>a</code> 进入插入光标后编辑模式</li>
+<li><code>r</code> 进入改写编辑模式</li>
+<li><code>q!</code> 不保存退出</li>
+</ul>
+<p>编辑模式下键盘上所有按键除ESC外都可输入字符，如上下左右键分别代表ABCD大写字母，按ESC退出编辑；</p>
+<p>在一般模式下按 <code>:</code> 进入指令列模式，最下面一行为指令列，<code>wq</code> 保存并退出。</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node学习01</title>
+    <url>/2020/12/15/Node%E5%AD%A6%E4%B9%A001/</url>
+    <content><![CDATA[<h1 id="学习规划"><a href="#学习规划" class="headerlink" title="学习规划"></a>学习规划</h1><ol>
+<li>后端的规范与思想</li>
+<li>基础的API</li>
+<li>常用的框架</li>
+<li>Web 项目<ol>
+<li>接收web请求</li>
+<li>处理业务逻辑</li>
+<li>文件操作</li>
+<li>数据库（MySQL，MongoDB）</li>
+<li>反向代理服务器（IP哈希，轮询）</li>
+</ol>
+</li>
+</ol>
+<h1 id="后端的规范与思想"><a href="#后端的规范与思想" class="headerlink" title="后端的规范与思想"></a>后端的规范与思想</h1><h1 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h1><ol>
+<li>web 层（接收和发送 HTTP 请求，封装；web层，controller层）<ul>
+<li><code>LoginController</code> 接收参数，判断是否非法，传给服务层</li>
+</ul>
+</li>
+<li>业务逻辑层（服务层，XXXService）<ul>
+<li><code>LoginService</code> 获取这个用户的密码，进行比较</li>
+</ul>
+</li>
+<li>DAO 层<ul>
+<li>DataBase（DB）：存数据</li>
+<li>业务：对对象进行操作</li>
+<li>如果要存储：对象 转为 数据</li>
+<li>如果要读取：数据 转为 对象</li>
+</ul>
+</li>
+<li>持久层：存在磁盘上，文件，数据库</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">web层：LoginController （接收参数，判断是否非法，传给服务层）</span><br><span class="line">服务层：LoginService （获取这个用户的密码，进行比较）</span><br><span class="line">DAO层：LoginDAO （从数据库获取数据，并转换为对象）</span><br><span class="line">Domain：User</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>单一职责原则</p>
+</blockquote>
+<h1 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h1><p>关键词：<code>require</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);        <span class="comment">// 系统自带模块可以直接写名</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&quot;./test.js&quot;</span>);   <span class="comment">// 引入自己的模块，必须加上相对路径</span></span><br></pre></td></tr></table></figure>
+
+
+<p>关键词：<code>exports</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;a&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>简写</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exports</span>.a = a;</span><br><span class="line"><span class="built_in">exports</span>.b = b;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>module.exports 和 exports 有什么区别？</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="built_in">module</span>.exports.a = a;</span><br><span class="line"><span class="built_in">exports</span>.b = b;</span><br><span class="line"><span class="comment">// &#123;a:&#x27;123&#x27;,b:&#x27;abc&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="built_in">module</span>.exports = a;</span><br><span class="line"><span class="built_in">exports</span> = b;</span><br><span class="line"><span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> x = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> y = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> z = x;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x == y); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">exports</span>); <span class="comment">// &#123;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">module</span>.exports); <span class="comment">// &#123;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">exports</span> == <span class="built_in">module</span>.exports); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(x == z) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>导出的永远是对象 <code>module.exports</code></p>
+<p>为了保证程序不出问题，永远都用 <code>module.exports</code></p>
+<h1 id="require-module-是系统变量吗，为什么我们可以直接使用"><a href="#require-module-是系统变量吗，为什么我们可以直接使用" class="headerlink" title="require,module 是系统变量吗，为什么我们可以直接使用"></a>require,module 是系统变量吗，为什么我们可以直接使用</h1><p>猜想：我们的 Node.js 可能是运行在一个函数中，module,require 都是其中的参数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">x</span>(<span class="params"><span class="built_in">exports</span>, <span class="built_in">require</span>, <span class="built_in">module</span>, __filename, __djrname</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// ---</span></span><br><span class="line">    <span class="comment">// 中间是我们的js代码</span></span><br><span class="line">    <span class="comment">// ---</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>证明：argument 是函数的所有参数，在window下直接打印argument</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line"></span><br><span class="line">/usr/local/bin/node /Users/guofeng/Desktop/code/project/blog/source/_posts/.js</span><br><span class="line">[Arguments] &#123;</span><br><span class="line">  <span class="string">&#x27;0&#x27;</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">&#x27;1&#x27;</span>: [<span class="built_in">Function</span>: <span class="built_in">require</span>] &#123;</span><br><span class="line">    resolve: [<span class="built_in">Function</span>: resolve] &#123; <span class="attr">paths</span>: [<span class="built_in">Function</span>: paths] &#125;,</span><br><span class="line">    main: Module &#123;</span><br><span class="line">      id: <span class="string">&#x27;.&#x27;</span>,</span><br><span class="line">      path: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts&#x27;</span>,</span><br><span class="line">      <span class="built_in">exports</span>: &#123;&#125;,</span><br><span class="line">      parent: <span class="literal">null</span>,</span><br><span class="line">      filename: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>,</span><br><span class="line">      loaded: <span class="literal">false</span>,</span><br><span class="line">      children: [],</span><br><span class="line">      paths: [<span class="built_in">Array</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    extensions: [<span class="built_in">Object</span>: <span class="literal">null</span> prototype] &#123;</span><br><span class="line">      <span class="string">&#x27;.js&#x27;</span>: [<span class="built_in">Function</span>],</span><br><span class="line">      <span class="string">&#x27;.json&#x27;</span>: [<span class="built_in">Function</span>],</span><br><span class="line">      <span class="string">&#x27;.node&#x27;</span>: [<span class="built_in">Function</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    cache: [<span class="built_in">Object</span>: <span class="literal">null</span> prototype] &#123;</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>: [Module]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&#x27;2&#x27;</span>: Module &#123;</span><br><span class="line">    id: <span class="string">&#x27;.&#x27;</span>,</span><br><span class="line">    path: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts&#x27;</span>,</span><br><span class="line">    <span class="built_in">exports</span>: &#123;&#125;,</span><br><span class="line">    parent: <span class="literal">null</span>,</span><br><span class="line">    filename: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>,</span><br><span class="line">    loaded: <span class="literal">false</span>,</span><br><span class="line">    children: [],</span><br><span class="line">    paths: [</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/node_modules&#x27;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&#x27;3&#x27;</span>: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;4&#x27;</span>: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">0</span>] == <span class="built_in">exports</span>);   <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">1</span>] == <span class="built_in">require</span>);   <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">2</span>] == <span class="built_in">module</span>);    <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node学习02 Node Api</title>
+    <url>/2020/12/16/Node%E5%AD%A6%E4%B9%A002%20Node%20Api/</url>
+    <content><![CDATA[<p><img src="/images/node_02_01.png" alt="avatar"></p>
+<h1 id="客户端-Socket"><a href="#客户端-Socket" class="headerlink" title="客户端 Socket"></a>客户端 Socket</h1><ul>
+<li>事件<ul>
+<li>connect</li>
+<li>data</li>
+<li>end</li>
+<li>timeout</li>
+<li>error</li>
+<li>close</li>
+</ul>
+</li>
+<li>属性<ul>
+<li>remoteAddress</li>
+<li>remotePort</li>
+<li>localAddress</li>
+<li>localPort</li>
+</ul>
+</li>
+<li>方法<ul>
+<li>setTimout</li>
+<li>write</li>
+<li>setEncoding</li>
+<li>end</li>
+</ul>
+</li>
+</ul>
+<h1 id="服务端-Server"><a href="#服务端-Server" class="headerlink" title="服务端 Server"></a>服务端 Server</h1><ul>
+<li>事件<ul>
+<li>listening（监听端口）</li>
+<li>connection（监听服务器链接）;参数 socket</li>
+<li>close</li>
+<li>error</li>
+</ul>
+</li>
+<li>方法<ul>
+<li>listen</li>
+<li>close</li>
+<li>address</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.js</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务端</span></span><br><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">&#x27;net&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建了一个服务</span></span><br><span class="line"><span class="keyword">var</span> server = net.createServer();</span><br><span class="line"><span class="comment">// 监听本机12306端口</span></span><br><span class="line">server.listen(<span class="number">12306</span>, <span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line"></span><br><span class="line">server.on(<span class="string">&quot;listening&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;服务已启动！&quot;</span>, server.address());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.on(<span class="string">&quot;connection&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">socket</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;有新的链接！&quot;</span>);</span><br><span class="line"></span><br><span class="line">    socket.on(<span class="string">&quot;data&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">        socket.write(<span class="string">&quot;hello client!&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    socket.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;客户端已关闭！&quot;</span>);</span><br><span class="line">        server.close();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">server.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;服务已关闭！&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">client.js</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 客户端</span></span><br><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">&#x27;net&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建了一个链接，链接到了12306端口</span></span><br><span class="line"><span class="keyword">var</span> socket = net.connect(<span class="number">12306</span>, <span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line"></span><br><span class="line">socket.setTimeout(<span class="number">2000</span>);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;timeout&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;请求超时！&quot;</span>);</span><br><span class="line">    socket.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;connect&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;已连接到服务器！&quot;</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.remoteAddress);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.remotePort);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.localAddress);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.localPort);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;data&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">    socket.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;链接已关闭！&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.write(<span class="string">&quot;hello server&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>Node</tag>
       </tags>
   </entry>
 </search>

@@ -198,7 +198,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/14/http%E5%8D%8F%E8%AE%AE/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/16/Node%E5%AD%A6%E4%B9%A002%20Node%20Api/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/WechatIMG222.jpeg">
@@ -270,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/14/http%E5%8D%8F%E8%AE%AE/" class="post-title-link" itemprop="url">http协议</a>
+          <a href="/2020/12/16/Node%E5%AD%A6%E4%B9%A002%20Node%20Api/" class="post-title-link" itemprop="url">Node学习02 Node Api</a>
         </h2>
 
         <div class="post-meta-container">
@@ -280,16 +280,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2020-12-14 10:31:15" itemprop="dateCreated datePublished" datetime="2020-12-14T10:31:15+08:00">2020-12-14</time>
+      <time title="创建时间：2020-12-16 21:40:02 / 修改时间：22:41:55" itemprop="dateCreated datePublished" datetime="2020-12-16T21:40:02+08:00">2020-12-16</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-15 14:01:01" itemprop="dateModified" datetime="2020-12-15T14:01:01+08:00">2020-12-15</time>
-      </span>
 
   
 </div>
@@ -301,21 +295,53 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="五层网络协议"><a href="#五层网络协议" class="headerlink" title="五层网络协议"></a>五层网络协议</h1><ol>
-<li>应用层：客户端（微信，QQ）</li>
-<li>传输层：交换机（TCP、UDP）</li>
-<li>网络层：IP协议</li>
-<li>数据链路层：ATM、FDBI</li>
-<li>物理层：电流、编码、频率</li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/14/http%E5%8D%8F%E8%AE%AE/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p><img src="/images/node_02_01.png" alt="avatar"></p>
+<h1 id="客户端-Socket"><a href="#客户端-Socket" class="headerlink" title="客户端 Socket"></a>客户端 Socket</h1><ul>
+<li>事件<ul>
+<li>connect</li>
+<li>data</li>
+<li>end</li>
+<li>timeout</li>
+<li>error</li>
+<li>close</li>
+</ul>
+</li>
+<li>属性<ul>
+<li>remoteAddress</li>
+<li>remotePort</li>
+<li>localAddress</li>
+<li>localPort</li>
+</ul>
+</li>
+<li>方法<ul>
+<li>setTimout</li>
+<li>write</li>
+<li>setEncoding</li>
+<li>end</li>
+</ul>
+</li>
+</ul>
+<h1 id="服务端-Server"><a href="#服务端-Server" class="headerlink" title="服务端 Server"></a>服务端 Server</h1><ul>
+<li>事件<ul>
+<li>listening（监听端口）</li>
+<li>connection（监听服务器链接）;参数 socket</li>
+<li>close</li>
+<li>error</li>
+</ul>
+</li>
+<li>方法<ul>
+<li>listen</li>
+<li>close</li>
+<li>address</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.js</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务端</span></span><br><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">&#x27;net&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建了一个服务</span></span><br><span class="line"><span class="keyword">var</span> server = net.createServer();</span><br><span class="line"><span class="comment">// 监听本机12306端口</span></span><br><span class="line">server.listen(<span class="number">12306</span>, <span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line"></span><br><span class="line">server.on(<span class="string">&quot;listening&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;服务已启动！&quot;</span>, server.address());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.on(<span class="string">&quot;connection&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">socket</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;有新的链接！&quot;</span>);</span><br><span class="line"></span><br><span class="line">    socket.on(<span class="string">&quot;data&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">        socket.write(<span class="string">&quot;hello client!&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    socket.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;客户端已关闭！&quot;</span>);</span><br><span class="line">        server.close();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">server.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;服务已关闭！&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">client.js</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 客户端</span></span><br><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">&#x27;net&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建了一个链接，链接到了12306端口</span></span><br><span class="line"><span class="keyword">var</span> socket = net.connect(<span class="number">12306</span>, <span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line"></span><br><span class="line">socket.setTimeout(<span class="number">2000</span>);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;timeout&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;请求超时！&quot;</span>);</span><br><span class="line">    socket.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;connect&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;已连接到服务器！&quot;</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.remoteAddress);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.remotePort);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.localAddress);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.localPort);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;data&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">    socket.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;链接已关闭！&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.write(<span class="string">&quot;hello server&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
       
     </div>
 
@@ -341,7 +367,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/14/HTTP,%20HTTP%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/15/Node%E5%AD%A6%E4%B9%A001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/WechatIMG222.jpeg">
@@ -354,7 +380,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/14/HTTP,%20HTTP%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">HTTP, HTTP性能优化</a>
+          <a href="/2020/12/15/Node%E5%AD%A6%E4%B9%A001/" class="post-title-link" itemprop="url">Node学习01</a>
         </h2>
 
         <div class="post-meta-container">
@@ -366,7 +392,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2020-12-14 10:31:15 / 修改时间：21:31:30" itemprop="dateCreated datePublished" datetime="2020-12-14T10:31:15+08:00">2020-12-14</time>
+      <time title="创建时间：2020-12-15 15:38:59 / 修改时间：16:44:50" itemprop="dateCreated datePublished" datetime="2020-12-15T15:38:59+08:00">2020-12-15</time>
     </span>
 
   
@@ -379,17 +405,73 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="你了解-HTTP-么？你知道如何减少-HTTP-请求确保你的性能最优"><a href="#你了解-HTTP-么？你知道如何减少-HTTP-请求确保你的性能最优" class="headerlink" title="你了解 HTTP 么？你知道如何减少 HTTP 请求确保你的性能最优"></a>你了解 HTTP 么？你知道如何减少 HTTP 请求确保你的性能最优</h1><ul>
-<li>HTTP 简介<br>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一<br>种网络协议。所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一<br>种发布和接收 HTML 页面的方法。1960 年美国人 Ted Nelson 构思了一种通过计算机处理<br>文本信息的方法，并称之为超文本（hypertext）,这成为了 HTTP 超文本传输协议标准架<br>构的发展根基。Ted Nelson 组织协调万维网协会（World Wide Web Consortium）和互联<br>网工程工作小组（Internet Engineering Task Force ）共同合作研究，最终发布了一系<br>列的 RFC，其中著名的 RFC 2616 定义了 HTTP 1.1。</li>
+          <h1 id="学习规划"><a href="#学习规划" class="headerlink" title="学习规划"></a>学习规划</h1><ol>
+<li>后端的规范与思想</li>
+<li>基础的API</li>
+<li>常用的框架</li>
+<li>Web 项目<ol>
+<li>接收web请求</li>
+<li>处理业务逻辑</li>
+<li>文件操作</li>
+<li>数据库（MySQL，MongoDB）</li>
+<li>反向代理服务器（IP哈希，轮询）</li>
+</ol>
+</li>
+</ol>
+<h1 id="后端的规范与思想"><a href="#后端的规范与思想" class="headerlink" title="后端的规范与思想"></a>后端的规范与思想</h1><h1 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h1><ol>
+<li>web 层（接收和发送 HTTP 请求，封装；web层，controller层）<ul>
+<li><code>LoginController</code> 接收参数，判断是否非法，传给服务层</li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/14/HTTP,%20HTTP%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+</li>
+<li>业务逻辑层（服务层，XXXService）<ul>
+<li><code>LoginService</code> 获取这个用户的密码，进行比较</li>
+</ul>
+</li>
+<li>DAO 层<ul>
+<li>DataBase（DB）：存数据</li>
+<li>业务：对对象进行操作</li>
+<li>如果要存储：对象 转为 数据</li>
+<li>如果要读取：数据 转为 对象</li>
+</ul>
+</li>
+<li>持久层：存在磁盘上，文件，数据库</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">web层：LoginController （接收参数，判断是否非法，传给服务层）</span><br><span class="line">服务层：LoginService （获取这个用户的密码，进行比较）</span><br><span class="line">DAO层：LoginDAO （从数据库获取数据，并转换为对象）</span><br><span class="line">Domain：User</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>单一职责原则</p>
+</blockquote>
+<h1 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h1><p>关键词：<code>require</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);        <span class="comment">// 系统自带模块可以直接写名</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&quot;./test.js&quot;</span>);   <span class="comment">// 引入自己的模块，必须加上相对路径</span></span><br></pre></td></tr></table></figure>
+
+
+<p>关键词：<code>exports</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;a&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>简写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.a = a;</span><br><span class="line"><span class="built_in">exports</span>.b = b;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>module.exports 和 exports 有什么区别？</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="built_in">module</span>.exports.a = a;</span><br><span class="line"><span class="built_in">exports</span>.b = b;</span><br><span class="line"><span class="comment">// &#123;a:&#x27;123&#x27;,b:&#x27;abc&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="built_in">module</span>.exports = a;</span><br><span class="line"><span class="built_in">exports</span> = b;</span><br><span class="line"><span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> x = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> y = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> z = x;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x == y); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">exports</span>); <span class="comment">// &#123;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">module</span>.exports); <span class="comment">// &#123;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">exports</span> == <span class="built_in">module</span>.exports); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(x == z) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>导出的永远是对象 <code>module.exports</code></p>
+<p>为了保证程序不出问题，永远都用 <code>module.exports</code></p>
+<h1 id="require-module-是系统变量吗，为什么我们可以直接使用"><a href="#require-module-是系统变量吗，为什么我们可以直接使用" class="headerlink" title="require,module 是系统变量吗，为什么我们可以直接使用"></a>require,module 是系统变量吗，为什么我们可以直接使用</h1><p>猜想：我们的 Node.js 可能是运行在一个函数中，module,require 都是其中的参数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">x</span>(<span class="params"><span class="built_in">exports</span>, <span class="built_in">require</span>, <span class="built_in">module</span>, __filename, __djrname</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// ---</span></span><br><span class="line">    <span class="comment">// 中间是我们的js代码</span></span><br><span class="line">    <span class="comment">// ---</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>证明：argument 是函数的所有参数，在window下直接打印argument</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line"></span><br><span class="line">/usr/local/bin/node /Users/guofeng/Desktop/code/project/blog/source/_posts/.js</span><br><span class="line">[Arguments] &#123;</span><br><span class="line">  <span class="string">&#x27;0&#x27;</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">&#x27;1&#x27;</span>: [<span class="built_in">Function</span>: <span class="built_in">require</span>] &#123;</span><br><span class="line">    resolve: [<span class="built_in">Function</span>: resolve] &#123; <span class="attr">paths</span>: [<span class="built_in">Function</span>: paths] &#125;,</span><br><span class="line">    main: Module &#123;</span><br><span class="line">      id: <span class="string">&#x27;.&#x27;</span>,</span><br><span class="line">      path: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts&#x27;</span>,</span><br><span class="line">      <span class="built_in">exports</span>: &#123;&#125;,</span><br><span class="line">      parent: <span class="literal">null</span>,</span><br><span class="line">      filename: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>,</span><br><span class="line">      loaded: <span class="literal">false</span>,</span><br><span class="line">      children: [],</span><br><span class="line">      paths: [<span class="built_in">Array</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    extensions: [<span class="built_in">Object</span>: <span class="literal">null</span> prototype] &#123;</span><br><span class="line">      <span class="string">&#x27;.js&#x27;</span>: [<span class="built_in">Function</span>],</span><br><span class="line">      <span class="string">&#x27;.json&#x27;</span>: [<span class="built_in">Function</span>],</span><br><span class="line">      <span class="string">&#x27;.node&#x27;</span>: [<span class="built_in">Function</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    cache: [<span class="built_in">Object</span>: <span class="literal">null</span> prototype] &#123;</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>: [Module]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&#x27;2&#x27;</span>: Module &#123;</span><br><span class="line">    id: <span class="string">&#x27;.&#x27;</span>,</span><br><span class="line">    path: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts&#x27;</span>,</span><br><span class="line">    <span class="built_in">exports</span>: &#123;&#125;,</span><br><span class="line">    parent: <span class="literal">null</span>,</span><br><span class="line">    filename: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>,</span><br><span class="line">    loaded: <span class="literal">false</span>,</span><br><span class="line">    children: [],</span><br><span class="line">    paths: [</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/project/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/code/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/Desktop/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/guofeng/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/Users/node_modules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;/node_modules&#x27;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&#x27;3&#x27;</span>: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts/.js&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;4&#x27;</span>: <span class="string">&#x27;/Users/guofeng/Desktop/code/project/blog/source/_posts&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">0</span>] == <span class="built_in">exports</span>);   <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">1</span>] == <span class="built_in">require</span>);   <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">2</span>] == <span class="built_in">module</span>);    <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -440,7 +522,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2020-12-15 13:49:05 / 修改时间：13:49:15" itemprop="dateCreated datePublished" datetime="2020-12-15T13:49:05+08:00">2020-12-15</time>
+      <time title="创建时间：2020-12-15 13:49:05 / 修改时间：15:16:31" itemprop="dateCreated datePublished" datetime="2020-12-15T13:49:05+08:00">2020-12-15</time>
     </span>
 
   
@@ -453,7 +535,57 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h1 id="常用的文件、目录操作命令"><a href="#常用的文件、目录操作命令" class="headerlink" title="常用的文件、目录操作命令"></a>常用的文件、目录操作命令</h1><ul>
+<li><code>pwd</code> : 查看用户的当前目录</li>
+<li><code>cd</code> : 命令来切换目录</li>
+<li><code>.</code> : 当前目录</li>
+<li><code>..</code> : 当前目录的上一级目录（父目录）</li>
+<li><code>-</code> : 用 cd 命令切换目录前所在的目录</li>
+<li><code>~</code> : 用户主目录的绝对路径名</li>
+<li><code>ls</code> : 显示文件或目录信息</li>
+<li><code>mkdir</code> : 当前目录下创建一个空目录</li>
+<li><code>rmdir</code> : 要求目录为空</li>
+<li><code>touch</code> : 生成一个空文件或更改文件的时间</li>
+<li><code>cp</code> : 复制文件或目录</li>
+<li><code>mv</code> : 移动文件或目录、文件或目录改名</li>
+<li><code>rm</code> : 删除文件或目录</li>
+<li><code>ln</code> : 建立链接文件</li>
+<li><code>find</code> : 查找文件</li>
+<li><code>file</code> /stat: 查看文件类型或文件属性信息</li>
+<li><code>cat</code> : 查看文本文件内容</li>
+<li><code>more</code> : 可以分页看</li>
+<li><code>less</code> : 不仅可以分页，还可以方便地搜索，回翻等操作</li>
+<li><code>tail</code>  -10:  查看文件的尾部的10行</li>
+<li><code>head</code>  -20: 查看文件的头部20行</li>
+<li><code>echo</code> : 把内容重定向到指定的文件中 ，有则打开，无则创建</li>
+</ul>
+<h1 id="文件打包和压缩命令"><a href="#文件打包和压缩命令" class="headerlink" title="文件打包和压缩命令"></a>文件打包和压缩命令</h1><p><strong>压缩命令</strong></p>
+<ul>
+<li><code>gzip filename</code></li>
+<li><code>bzip2 filename</code></li>
+<li><code>tar -czvf filename</code></li>
+</ul>
+<p><strong>解压命令</strong></p>
+<ul>
+<li><code>gzip -d filename.gz</code></li>
+<li><code>bzip2 -d filename.bz2</code></li>
+<li><code>tar -xzvf filename.tar.gz</code></li>
+</ul>
+<h1 id="vim程序编辑器"><a href="#vim程序编辑器" class="headerlink" title="vim程序编辑器"></a>vim程序编辑器</h1><p>vim是vi文本编辑器的进阶版，在所有linux系统上均可使用</p>
+<p>vi分为三种模式：一般模式，编辑模式和指令列命令模式 </p>
+<p><code>vi hello.c</code> : 进入 hello.c 文件，此时为一般模式，若 hello.c 不存在则自动新建 </p>
+<p>一般模式下执行vi定义的键盘上转义字符操作，</p>
+<ul>
+<li><code>del</code> : 删除光标上字符（mac键盘为 <code>option</code> + 删除键）</li>
+<li><code>dd</code> : 删除一整列，退格键及上下左右键移动光标</li>
+<li><code>i</code> : 进入插入光标前编辑模式</li>
+<li><code>a</code> 进入插入光标后编辑模式</li>
+<li><code>r</code> 进入改写编辑模式</li>
+<li><code>q!</code> 不保存退出</li>
+</ul>
+<p>编辑模式下键盘上所有按键除ESC外都可输入字符，如上下左右键分别代表ABCD大写字母，按ESC退出编辑；</p>
+<p>在一般模式下按 <code>:</code> 进入指令列模式，最下面一行为指令列，<code>wq</code> 保存并退出。</p>
+
       
     </div>
 
@@ -883,7 +1015,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/13/react%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/14/http%E5%8D%8F%E8%AE%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/WechatIMG222.jpeg">
@@ -896,7 +1028,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/13/react%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="post-title-link" itemprop="url">react最佳实践</a>
+          <a href="/2020/12/14/http%E5%8D%8F%E8%AE%AE/" class="post-title-link" itemprop="url">http协议</a>
         </h2>
 
         <div class="post-meta-container">
@@ -907,14 +1039,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2020-12-13 22:53:08" itemprop="dateCreated datePublished" datetime="2020-12-13T22:53:08+08:00">2020-12-13</time>
+      <time title="创建时间：2020-12-14 10:31:15" itemprop="dateCreated datePublished" datetime="2020-12-14T10:31:15+08:00">2020-12-14</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-14 10:34:32" itemprop="dateModified" datetime="2020-12-14T10:34:32+08:00">2020-12-14</time>
+        <time title="修改时间：2020-12-15 15:31:52" itemprop="dateModified" datetime="2020-12-15T15:31:52+08:00">2020-12-15</time>
       </span>
 
   
@@ -927,14 +1059,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h1 id="增加配置文件-eslintrc"><a href="#增加配置文件-eslintrc" class="headerlink" title="增加配置文件 .eslintrc"></a>增加配置文件 .eslintrc</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 直接继承 react 的eslint配置</span><br><span class="line">&#123;</span><br><span class="line">    &quot;extends&quot;: &quot;react-app&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="五层网络协议"><a href="#五层网络协议" class="headerlink" title="五层网络协议"></a>五层网络协议</h1><ol>
+<li>应用层：客户端（微信，QQ）</li>
+<li>传输层：交换机（TCP、UDP）</li>
+<li>网络层：IP协议</li>
+<li>数据链路层：ATM、FDBI</li>
+<li>物理层：电流、编码、频率</li>
+</ol>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/12/13/react%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/#more" rel="contents">
+              <a class="btn" href="/2020/12/14/http%E5%8D%8F%E8%AE%AE/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
