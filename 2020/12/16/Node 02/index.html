@@ -25,21 +25,21 @@
   </script>
 <meta name="description" content="客户端 Socket 事件 connect data end timeout error close   属性 remoteAddress remotePort localAddress localPort   方法 setTimout write setEncoding end    服务端 Server 事件 listening（监听端口） connection（监听服务器链接）;参数 so">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node学习02 Node Api">
-<meta property="og:url" content="http://example.com/2020/12/16/Node%E5%AD%A6%E4%B9%A002%20Node%20Api/index.html">
+<meta property="og:title" content="Node 02 Node Api(Net)">
+<meta property="og:url" content="http://example.com/2020/12/16/Node%2002/index.html">
 <meta property="og:site_name" content="Logic">
 <meta property="og:description" content="客户端 Socket 事件 connect data end timeout error close   属性 remoteAddress remotePort localAddress localPort   方法 setTimout write setEncoding end    服务端 Server 事件 listening（监听端口） connection（监听服务器链接）;参数 so">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/node_02_01.png">
 <meta property="article:published_time" content="2020-12-16T13:40:02.000Z">
-<meta property="article:modified_time" content="2020-12-16T14:41:55.466Z">
+<meta property="article:modified_time" content="2020-12-17T14:42:25.312Z">
 <meta property="article:author" content="Logic">
 <meta property="article:tag" content="Node">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/node_02_01.png">
 
 
-<link rel="canonical" href="http://example.com/2020/12/16/Node%E5%AD%A6%E4%B9%A002%20Node%20Api/">
+<link rel="canonical" href="http://example.com/2020/12/16/Node%2002/">
 
 
 <script class="page-configurations">
@@ -51,7 +51,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Node学习02 Node Api | Logic</title>
+<title>Node 02 Node Api(Net) | Logic</title>
   
 
 
@@ -189,7 +189,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-Socket"><span class="nav-number">1.</span> <span class="nav-text">客户端 Socket</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-Server"><span class="nav-number">2.</span> <span class="nav-text">服务端 Server</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-Socket"><span class="nav-number">1.</span> <span class="nav-text">客户端 Socket</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-Server"><span class="nav-number">2.</span> <span class="nav-text">服务端 Server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80%E8%A2%AB%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">3.</span> <span class="nav-text">地址被占用情况</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -205,7 +205,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -218,7 +218,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -265,7 +265,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/16/Node%E5%AD%A6%E4%B9%A002%20Node%20Api/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/16/Node%2002/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/WechatIMG222.jpeg">
@@ -278,7 +278,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Node学习02 Node Api
+          Node 02 Node Api(Net)
         </h1>
 
         <div class="post-meta-container">
@@ -288,10 +288,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-12-16 21:40:02 / 修改时间：22:41:55" itemprop="dateCreated datePublished" datetime="2020-12-16T21:40:02+08:00">2020-12-16</time>
+      <time title="创建时间：2020-12-16 21:40:02" itemprop="dateCreated datePublished" datetime="2020-12-16T21:40:02+08:00">2020-12-16</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-17 22:42:25" itemprop="dateModified" datetime="2020-12-17T22:42:25+08:00">2020-12-17</time>
+      </span>
 
   
 </div>
@@ -303,7 +309,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><img src="/images/node_02_01.png" alt="avatar"></p>
+        <p><img src="/images/node_02_01.png" alt="Logic"></p>
 <h1 id="客户端-Socket"><a href="#客户端-Socket" class="headerlink" title="客户端 Socket"></a>客户端 Socket</h1><ul>
 <li>事件<ul>
 <li>connect</li>
@@ -349,7 +355,22 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">client.js</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 客户端</span></span><br><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">&#x27;net&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建了一个链接，链接到了12306端口</span></span><br><span class="line"><span class="keyword">var</span> socket = net.connect(<span class="number">12306</span>, <span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line"></span><br><span class="line">socket.setTimeout(<span class="number">2000</span>);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;timeout&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;请求超时！&quot;</span>);</span><br><span class="line">    socket.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;connect&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;已连接到服务器！&quot;</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.remoteAddress);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.remotePort);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.localAddress);</span><br><span class="line">    <span class="built_in">console</span>.log(socket.localPort);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;data&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">    socket.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;链接已关闭！&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.write(<span class="string">&quot;hello server&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 
+<h1 id="地址被占用情况"><a href="#地址被占用情况" class="headerlink" title="地址被占用情况"></a>地址被占用情况</h1><ul>
+<li>当项目已启动时，再次启动项目会报错</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">events.js:<span class="number">288</span></span><br><span class="line">      <span class="keyword">throw</span> er; <span class="comment">// Unhandled &#x27;error&#x27; event</span></span><br><span class="line">      ^</span><br><span class="line"></span><br><span class="line"><span class="built_in">Error</span>: listen EADDRINUSE: address already <span class="keyword">in</span> use <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">12306</span></span><br><span class="line">    at Server.setupListenHandle [<span class="keyword">as</span> _listen2] (net.js:<span class="number">1309</span>:<span class="number">16</span>)</span><br><span class="line">    at listenInCluster (net.js:<span class="number">1357</span>:<span class="number">12</span>)</span><br><span class="line">    at doListen (net.js:<span class="number">1496</span>:<span class="number">7</span>)</span><br><span class="line">    at processTicksAndRejections (internal/process/task_queues.js:<span class="number">85</span>:<span class="number">21</span>)</span><br><span class="line">Emitted <span class="string">&#x27;error&#x27;</span> event on Server instance at:</span><br><span class="line">    at emitErrorNT (net.js:<span class="number">1336</span>:<span class="number">8</span>)</span><br><span class="line">    at processTicksAndRejections (internal/process/task_queues.js:<span class="number">84</span>:<span class="number">21</span>) &#123;</span><br><span class="line">  code: <span class="string">&#x27;EADDRINUSE&#x27;</span>,</span><br><span class="line">  errno: <span class="string">&#x27;EADDRINUSE&#x27;</span>,</span><br><span class="line">  syscall: <span class="string">&#x27;listen&#x27;</span>,</span><br><span class="line">  address: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">  port: <span class="number">12306</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>通过命令行查找运行程序</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux |grep &quot;node&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">guofeng            706   0.0  0.0  4551280   8168   ??  S     91220    0:59.82 &#x2F;Library&#x2F;Application Support&#x2F;Adobe&#x2F;Adobe Desktop Common&#x2F;IPCBox&#x2F;AdobeIPCBroker.app&#x2F;Contents&#x2F;MacOS&#x2F;AdobeIPCBroker -launchedbyvulcan &#x2F;Applications&#x2F;Utilities&#x2F;Adobe Creative Cloud Experience&#x2F;CCXProcess&#x2F;CCXProcess.app&#x2F;Contents&#x2F;MacOS&#x2F;..&#x2F;libs&#x2F;Adobe_CCXProcess.node</span><br><span class="line">guofeng            657   0.0  0.0  4770368   6780   ??  S     91220    0:28.36 &#x2F;Applications&#x2F;Utilities&#x2F;Adobe Creative Cloud Experience&#x2F;CCXProcess&#x2F;CCXProcess.app&#x2F;Contents&#x2F;MacOS&#x2F;..&#x2F;libs&#x2F;Adobe_CCXProcess.node &#x2F;Applications&#x2F;Utilities&#x2F;Adobe Creative Cloud Experience&#x2F;CCXProcess&#x2F;CCXProcess.app&#x2F;Contents&#x2F;MacOS&#x2F;..&#x2F;js&#x2F;main.js</span><br><span class="line">guofeng          84369   0.0  0.0  4277664    728 s001  S+    7:07下午   0:00.00 grep node</span><br><span class="line">guofeng          84352   0.0  0.1  4536264  21900   ??  S     7:05下午   0:00.08 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;node &#x2F;Users&#x2F;guofeng&#x2F;Desktop&#x2F;code&#x2F;learn&#x2F;Node&#x2F;05&#x2F;server.js</span><br><span class="line">guofeng          84178   0.0  0.2  8851768  28804   ??  S     6:55下午   0:00.18 &#x2F;Applications&#x2F;Visual Studio Code.app&#x2F;Contents&#x2F;Frameworks&#x2F;Code Helper (Renderer).app&#x2F;Contents&#x2F;MacOS&#x2F;Code Helper (Renderer) &#x2F;Users&#x2F;guofeng&#x2F;.vscode&#x2F;extensions&#x2F;dbaeumer.vscode-eslint-2.1.13&#x2F;server&#x2F;out&#x2F;eslintServer.js --node-ipc --clientProcessId&#x3D;84139</span><br><span class="line">guofeng          84160   0.0  0.2  8841508  29860   ??  S     6:55下午   0:00.19 &#x2F;Applications&#x2F;Visual Studio Code.app&#x2F;Contents&#x2F;Frameworks&#x2F;Code Helper (Renderer).app&#x2F;Contents&#x2F;MacOS&#x2F;Code Helper (Renderer) &#x2F;Users&#x2F;guofeng&#x2F;.vscode&#x2F;extensions&#x2F;formulahendry.auto-rename-tag-0.1.5&#x2F;packages&#x2F;server&#x2F;dist&#x2F;serverMain.js --node-ipc --clientProcessId&#x3D;84139</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>结束进程</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill 84352</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -365,11 +386,14 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/12/15/Node%E5%AD%A6%E4%B9%A001/" rel="prev" title="Node学习01">
-                  <i class="fa fa-chevron-left"></i> Node学习01
+                <a href="/2020/12/15/Node%2001/" rel="prev" title="Node 01">
+                  <i class="fa fa-chevron-left"></i> Node 01
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2020/12/17/Node%2003/" rel="next" title="Node 03 Net 简易服务器">
+                  Node 03 Net 简易服务器 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
